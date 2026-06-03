@@ -2,134 +2,112 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>La Clichoise Handball – Accueil</title>
+    <title>Accueil – La Clichoise Handball</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBP39TY6W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9WBP39TY6W');
+    </script>
+
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            margin: 0;
+            background-color: #f5f5f5;
         }
-
         header {
-            background: #1a237e;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            background-color:#1a237e;
+            padding:10px 20px;
+            display:flex;
+            align-items:center;
         }
-
-        nav {
-            background: #283593;
-            padding: 10px;
-            text-align: center;
+        header img {
+            height:80px;
+            width:auto;
+            margin-right:25px;
         }
-
         nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            margin-right:25px;
         }
-
-        .hero {
-            background-image: url("image/handball_hero.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        .section {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .section h2 {
-            color: #1a237e;
-            margin-bottom: 20px;
-        }
-
-        .project {
+        .content {
             max-width: 900px;
-            margin: auto;
+            margin: 40px auto;
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            text-align: left;
-            line-height: 1.6;
         }
-
-        .project h3 {
-            color: #283593;
-            margin-top: 25px;
+        h1 {
+            color:#1a237e;
+            text-align:center;
+        }
+        h2 {
+            color:#1a237e;
+            margin-top:30px;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>La Clichoise Handball</h1>
+    <a href="index.html">
+        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
+    </a>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="equipes.html">Équipes</a>
+        <a href="calendrier.html">Calendrier</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="index.html">Accueil</a>
-    <a href="equipes.html">Équipes</a>
-    <a href="calendrier.html">Calendrier</a>
-    <a href="resultats.html">Résultats</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<div class="content">
+    <h1>Bienvenue à La Clichoise Handball</h1>
 
-<div class="hero">
-    Bienvenue au club !
-</div>
+    <h2>🎯 Notre projet de club</h2>
+    <p>
+        La Clichoise Handball est un club engagé pour le développement du handball à Clichy,
+        avec une ambition forte : offrir à chaque licencié un environnement sportif, éducatif
+        et humain de qualité.
+    </p>
 
-<div class="section">
-    <h2>Le Projet du Club</h2>
+    <h2>🤝 Nos valeurs</h2>
+    <ul>
+        <li><strong>Respect</strong> – des règles, des partenaires, des adversaires.</li>
+        <li><strong>Engagement</strong> – sur le terrain comme dans la vie du club.</li>
+        <li><strong>Esprit d’équipe</strong> – avancer ensemble, progresser ensemble.</li>
+        <li><strong>Ouverture</strong> – accueillir tous les publics, sans distinction.</li>
+    </ul>
 
-    <div class="project">
+    <h2>📚 Formation & Jeunesse</h2>
+    <p>
+        Le club place la formation au cœur de son projet : école de hand, catégories jeunes,
+        accompagnement des entraîneurs, progression technique et plaisir du jeu.
+    </p>
 
-        <h3>🏆 Notre Ambition</h3>
-        <p>
-            La Clichoise Handball a pour objectif de devenir un club structuré, reconnu et durable à Clichy.
-            Nous voulons offrir un cadre sportif sérieux, moderne et accessible à tous les habitants de la ville.
-        </p>
+    <h2>🏆 Ambition sportive</h2>
+    <p>
+        Développer des équipes compétitives, structurer la filière jeunes, renforcer la
+        présence du club dans les championnats départementaux et régionaux.
+    </p>
 
-        <h3>👦👧 Former les jeunes</h3>
-        <p>
-            Le cœur du projet repose sur la formation des jeunes catégories : U9, U11, U13, U15, U18.
-            Notre priorité est d’apprendre les bases du handball, développer l’esprit d’équipe et transmettre les valeurs du sport.
-        </p>
-
-        <h3>🤝 Un club ouvert à tous</h3>
-        <p>
-            Le club accueille filles et garçons, débutants comme confirmés.
-            Nous voulons créer un lieu où chacun trouve sa place, progresse et s’épanouit.
-        </p>
-
-        <h3>🏟️ Une collaboration avec la ville</h3>
-        <p>
-            Le club travaille en lien avec la Mairie de Clichy pour obtenir des créneaux d’entraînement
-            dans les gymnases municipaux et développer la pratique du handball dans la ville.
-        </p>
-
-        <h3>📈 Développement et compétitions</h3>
-        <p>
-            Notre objectif est d’inscrire progressivement toutes les catégories en compétition officielle
-            auprès du Comité 92 Handball, avec un encadrement sérieux et des entraîneurs formés.
-        </p>
-
-        <h3>❤️ Les valeurs du club</h3>
-        <p>
-            Respect – Engagement – Esprit d’équipe – Plaisir – Progression.
-        </p>
-
-    </div>
+    <h2>🏛️ Un club ancré dans la ville</h2>
+    <p>
+        La Clichoise Handball travaille en lien avec la municipalité, les écoles, les
+        associations locales et les familles pour faire du handball un acteur fort de la vie
+        clichoise.
+    </p>
 </div>
 
 </body>

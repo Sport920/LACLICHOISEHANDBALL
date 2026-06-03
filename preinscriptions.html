@@ -2,41 +2,90 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Pré-inscriptions - La Clichoise Handball</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Préinscriptions – La Clichoise Handball</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color:#1a237e;
+            padding:10px 20px;
+            display:flex;
+            align-items:center;
+        }
+        header img {
+            height:80px;
+            width:auto;
+            margin-right:25px;
+        }
+        nav a {
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            margin-right:25px;
+        }
+        h1 {
+            text-align:center;
+            color:#1a237e;
+            margin-top:30px;
+        }
+        .box {
+            max-width:800px;
+            margin:30px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.15);
+            line-height:1.6;
+            text-align:center;
+        }
+        a.button {
+            display:inline-block;
+            background:#1a237e;
+            color:white;
+            padding:12px 20px;
+            border-radius:5px;
+            text-decoration:none;
+            font-size:18px;
+            margin-top:20px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <img src="image/logo.png" alt="Logo La Clichoise Handball" class="logo">
-    <h1>Pré-inscriptions</h1>
+    <a href="index.html">
+        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
+    </a>
+
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="preinscriptions.html">Pré-inscriptions</a>
+        <a href="equipes.html">Équipes</a>
+        <a href="calendrier.html">Calendrier</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="content">
-    <h2>Pré-inscriptions 2024-2025</h2>
-    <p>Bienvenue ! Remplissez le formulaire ci-dessous pour pré-inscrire votre enfant ou vous-même.</p>
+<h1>Préinscriptions</h1>
 
-    <p><strong>Informations à fournir :</strong></p>
-    <ul>
-        <li>Nom / Prénom</li>
-        <li>Date de naissance</li>
-        <li>Catégorie souhaitée</li>
-        <li>Coordonnées du responsable</li>
-    </ul>
-    <p><p>Formulaire en ligne :
-    <a href="https://forms.gle/9HDL1A9Nw4ekjBEW9" target="_blank">
-        Cliquez ici pour accéder au formulaire
-    </a>
+<div class="box">
+    <p>
+        Merci de remplir le formulaire ci‑dessous pour vous préinscrire.
     </p>
-</section>
 
-<footer>
-    <p>© 2026 La Clichoise Handball — Tous droits réservés</p>
-</footer>
+    <!-- Bouton vers ton Google Forms -->
+    <a class="button" href="https://forms.gle/9HDL1A9Nw4ekjBEW9" target="_blank">
+        Ouvrir le formulaire de préinscription
+    </a>
+
+    <p style="margin-top:20px; color:#777;">
+        (Dès que tu me donnes le lien d’intégration, j’affiche le formulaire directement ici)
+    </p>
+</div>
 
 </body>
 </html>
