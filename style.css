@@ -1,0 +1,111 @@
+/* 🎨 Palette officielle La Clichoise Handball */
+:root {
+    --bleu: #0A2A66;      /* Bleu foncé du logo */
+    --rouge: #D62828;     /* Rouge vif du logo */
+    --jaune: #F4A300;     /* Accent dynamique */
+    --blanc: #ffffff;
+    --gris-clair: #f2f2f2;
+    --gris-fonce: #1a1a1a;
+}
+
+/* 🌐 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--gris-clair);
+    color: var(--gris-fonce);
+    line-height: 1.6;
+}
+
+/* 🏆 HEADER */
+header {
+    background: var(--bleu);
+    color: var(--blanc);
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--rouge);
+}
+
+.logo {
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+/* 🔗 NAVIGATION */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--blanc);
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--jaune);
+    text-shadow: 0 0 5px var(--jaune);
+}
+
+/* 🥇 HERO */
+.hero {
+    background: linear-gradient(135deg, var(--bleu), #051a40);
+    color: var(--blanc);
+    padding: 120px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--rouge);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 📄 CONTENU */
+.content {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    background: var(--blanc);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h3 {
+    color: var(--bleu);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+/* 🔗 Liens */
+a {
+    color: var(--rouge);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--bleu);
+}
+
+/* ⚽ FOOTER */
+footer {
+    background: var(--bleu);
+    color: var(--blanc);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 5px solid var(--rouge);
+}
