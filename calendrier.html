@@ -3,49 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Calendrier – La Clichoise Handball</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            background: #eef1f7;
+            color: #333;
         }
+
+        /* HEADER */
         header {
-            background-color:#1a237e;
-            padding:10px 20px;
-            display:flex;
-            align-items:center;
+            background: #1a237e;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
+
         header img {
-            height:80px;
-            width:auto;
-            margin-right:25px;
+            height: 110px; /* LOGO MIS EN AVANT */
+            width: auto;
+            transition: 0.3s ease;
         }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
         nav a {
-            color:white;
-            text-decoration:none;
-            font-size:18px;
-            margin-right:25px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
         }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* TITRE */
         h1 {
-            text-align:center;
-            color:#1a237e;
-            margin-top:30px;
+            text-align: center;
+            color: #1a237e;
+            margin-top: 40px;
+            font-size: 32px;
+            font-weight: 600;
         }
+
+        /* BOX */
         .box {
-            max-width:800px;
-            margin:30px auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 2px 6px rgba(0,0,0,0.15);
-            line-height:1.6;
-            text-align:center;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        iframe {
-            width:100%;
-            height:900px;
-            border:none;
-            border-radius:10px;
+
+        .box p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+            }
+
+            header img {
+                height: 85px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
@@ -66,16 +115,11 @@
     </nav>
 </header>
 
-<h1>Préinscriptions</h1>
+<h1>Calendrier du Club</h1>
 
 <div class="box">
-    <p>Merci de remplir le formulaire ci‑dessous pour vous préinscrire.</p>
-
-    <!-- Intégration du Google Forms -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8q8f0p8Zp0p0p0p0p0p0p0p0p0p0p0p0p0p0p0p0p0p0/viewform?embedded=true">
-        Chargement…
-    </iframe>
+    <p>Retrouvez ici toutes les informations concernant les entraînements, les matchs et les événements du club.</p>
+    <p>Le calendrier détaillé sera prochainement disponible.</p>
 </div>
 
 </body>
-</html>
