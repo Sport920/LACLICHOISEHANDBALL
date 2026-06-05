@@ -13,66 +13,14 @@
       gtag('config', 'G-9WBP39TY6W');
     </script>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color:#1a237e;
-            padding:10px 20px;
-            display:flex;
-            align-items:center;
-        }
-        header img {
-            height:80px;
-            width:auto;
-            margin-right:25px;
-        }
-        nav a {
-            color:white;
-            text-decoration:none;
-            font-size:18px;
-            margin-right:25px;
-        }
-        h1 {
-            text-align: center;
-            color: #1a237e;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-        .intro {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        .partners {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        .partners p {
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
     <a href="index.html">
-        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
+        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball" class="logo">
     </a>
 
     <nav>
@@ -80,20 +28,38 @@
         <a href="equipes.html">Équipes</a>
         <a href="calendrier.html">Calendrier</a>
         <a href="resultats.html">Résultats</a>
-        <a href="partenaires.html">Partenaires</a>
+        <a class="active" href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<h1>Nos Partenaires</h1>
+<section class="hero">
+    <h2>Partenaires & Soutiens</h2>
+    <p>Accompagnez la Clichoise Handball dans son développement sportif, éducatif et citoyen sur la ville de Clichy.</p>
+</section>
 
-<div class="intro">
-    <h2>Entreprises, rejoignez l’aventure !</h2>
-    <p>
-        La Clichoise Handball est un club en plein développement, engagé dans la formation des jeunes,
-        la promotion du sport pour tous et la création d’un véritable dynamisme sportif à Clichy.
-    </p>
-    <p>
-        Nous recherchons des entreprises souhaitant nous accompagner dans notre projet :
-        soutenir nos équipes, participer à la vie du club, contribuer à l’achat de matériel,
-        et aider.
+<div class="content">
+    <div class="intro">
+        <h2>Pourquoi nous soutenir ?</h2>
+        <p>La Clichoise Handball grandit autour d’un projet clair : former les jeunes, promouvoir le sport pour tous, et créer une dynamique de club moderne et conviviale à Clichy.</p>
+        <p>En devenant partenaire, vous contribuez à l’achat d’équipements, à l’organisation d’événements, et à l’essor d’un club local solidaire.</p>
+    </div>
+
+    <div class="partners">
+        <h3>Ce que nous proposons</h3>
+        <ul>
+            <li>Sponsoring visuel sur nos maillots et supports</li>
+            <li>Visibilité lors des matchs et événements</li>
+            <li>Partenariats d’actions locales et solidaires</li>
+            <li>Renforcement de l’image de marque auprès des familles clichoises</li>
+        </ul>
+        <a class="btn" href="contact.html">Contactez-nous</a>
+    </div>
+</div>
+
+<footer>
+    © 2024 La Clichoise Handball – Tous droits réservés
+</footer>
+
+</body>
+</html>

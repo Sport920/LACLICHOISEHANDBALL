@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-03T19:37:27.354902" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Calendrier" source="C:\Users\costa\Documents\LaClichoisehandball\test_calendrier.robot">
-<test id="s1-t1" name="Vérifier le titre du calendrier" line="8">
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-03T19:31:30.521702" rpa="false" schemaversion="5">
+<suite id="s1" name="LaClichoisehandball" source="C:\Users\costa\Documents\LaClichoisehandball">
+<suite id="s1-s1" name="Test Calendrier" source="C:\Users\costa\Documents\LaClichoisehandball\test_calendrier.robot">
+<test id="s1-s1-t1" name="Vérifier le titre du calendrier" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T19:37:27.718009" level="INFO">Opening browser 'chrome' to base url 'file://C:\Users\costa\Documents\LaClichoisehandball/calendrier.html'.</msg>
+<msg time="2026-06-03T19:31:31.013984" level="INFO">Opening browser 'chrome' to base url 'file://C:\Users\costa\Documents\LaClichoisehandball/calendrier.html'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T19:37:27.717563" elapsed="1.094684"/>
+<status status="PASS" start="2026-06-03T19:31:31.013312" elapsed="2.188315"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-06-03T19:37:28.837519" level="INFO">Current page contains text 'Calendrier'.</msg>
+<msg time="2026-06-03T19:31:34.923361" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-03T19:31:34.923831" level="FAIL">Page should have contained text 'Calendrier' but did not.</msg>
 <arg>Calendrier</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-06-03T19:37:28.813040" elapsed="0.024762"/>
+<status status="FAIL" start="2026-06-03T19:31:33.203740" elapsed="1.791680">Page should have contained text 'Calendrier' but did not.</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-03T19:37:28.838474" elapsed="2.312214"/>
+<status status="NOT RUN" start="2026-06-03T19:33:35.663374" elapsed="0.000918"/>
 </kw>
-<status status="PASS" start="2026-06-03T19:37:27.716006" elapsed="3.435313"/>
+<status status="FAIL" start="2026-06-03T19:31:31.004843" elapsed="124.660270">Page should have contained text 'Calendrier' but did not.</status>
 </test>
-<status status="PASS" start="2026-06-03T19:37:27.356694" elapsed="3.795711"/>
+<status status="FAIL" start="2026-06-03T19:31:30.598797" elapsed="125.072745"/>
+</suite>
+<status status="FAIL" start="2026-06-03T19:31:30.540678" elapsed="125.135790"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test Calendrier" id="s1" pass="1" fail="0" skip="0">Test Calendrier</stat>
+<stat name="LaClichoisehandball" id="s1" pass="0" fail="1" skip="0">LaClichoisehandball</stat>
+<stat name="Test Calendrier" id="s1-s1" pass="0" fail="1" skip="0">LaClichoisehandball.Test Calendrier</stat>
 </suite>
 </statistics>
 <errors>
