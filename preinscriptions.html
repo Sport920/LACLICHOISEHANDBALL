@@ -31,7 +31,7 @@
     </p>
 
     <!-- Bouton vers ton Google Forms -->
-    <a class="button" href="https://forms.gle/9HDL1A9Nw4ekjBEW9" target="_blank">
+    <a class="button" href="https://forms.gle/MqWsTmePCeQissNQ6" target="_blank">
         Ouvrir le formulaire de préinscription
     </a>
 
@@ -42,6 +42,129 @@
     <p style="margin-top:20px; color:#777;">
         
     </p>
+
+    <p style="margin-top:10px; color:#2b3a5d; font-weight:600;">Paiement des licences et cotisations : les paiements se font directement sur HelloAsso.</p>
+    <p style="margin-bottom:12px"><a class="button" href="https://www.helloasso.com/associations/la-clichoise-handball" target="_blank" rel="noopener" style="background:linear-gradient(135deg,var(--bleu),var(--bleu-clair));">Payer / S'inscrire (HelloAsso)</a></p>
+
+    <div class="box chat-box">
+        <div class="chat-card">
+            <div class="chat-header">
+                <div>
+                    <h2>Assistant d'inscription</h2>
+                    <p>Posez une question sur les tarifs, les catégories ou les pré-inscriptions.</p>
+                </div>
+                <span class="chat-status">En ligne</span>
+            </div>
+
+            <div class="chat-window" id="chatWindow" aria-live="polite">
+                    <div class="chat-message bot">
+                        <strong>Bonjour !</strong> Je peux vous donner les tarifs, années de naissance, lieux et horaires pour les catégories jeunes et mixtes. Les catégories jeunes jusqu'à U11 sont mixtes (filles et garçons).
+                    </div>
+            </div>
+
+            <div class="chat-actions">
+                <button type="button" data-question="tarifs">Tarifs</button>
+                <button type="button" data-question="categories">Catégories</button>
+                <button type="button" data-question="annees">Années</button>
+                <button type="button" data-question="inscriptions">Pré-inscriptions</button>
+                <button type="button" data-question="calendrier">Calendrier</button>
+                <button type="button" data-question="contact">Contact</button>
+                <button type="button" data-question="jeunes">Jeunes</button>
+                <button type="button" data-question="mixtes">Mixtes</button>
+            </div>
+
+            <form id="chatForm" class="chat-form">
+                <input id="chatInput" type="text" placeholder="Posez une question ici..." aria-label="Question de chatbot">
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const answers = {
+            tarifs:
+                "Tarifs officiels :<br>- Baby Hand <span class='badge'>Mixte</span> : 150 €<br>- U7 <span class='badge'>Mixte</span> : 160 €<br>- U9 <span class='badge'>Mixte</span> : 160 €<br>- U11 <span class='badge'>Mixte</span> : 170 €<br>- Handfit <span class='badge'>Mixte</span> : 120 €<br>- Séniors féminines : 200 €<br><br>Ces tarifs sont à jour pour la saison 2026-2027.",
+            categories:
+                "Catégories ouvertes selon HelloAsso :<br>- BabyHand <span class='badge'>Mixte</span><br>- HandFit <span class='badge'>Mixte</span><br>- U7 <span class='badge'>Mixte</span><br>- U9 <span class='badge'>Mixte</span><br>- U11 <span class='badge'>Mixte</span><br>- Senior féminine : Féminine<br><br>Les catégories jeunes jusqu'à U11 sont mixtes (filles et garçons).<br>Les pré-inscriptions sont officiellement ouvertes !",
+            annees:
+                "Années de naissance recommandées :\n- BabyHand : 2017 et après\n- U7 : 2018-2019\n- U9 : 2016-2017\n- U11 : 2014-2015\n- Senior féminine : 2006 et avant (ou selon le niveau du club).\nVérifiez toujours avec le club pour la catégorie exacte.",
+            inscriptions:
+                "Pré-inscriptions :<br>- Remplissez le formulaire de préinscription via notre Google Form ou rendez-vous sur HelloAsso pour finaliser le paiement.<br>- Formulaire Google : <a href=\"https://forms.gle/MqWsTmePCeQissNQ6\" target=\"_blank\" rel=\"noopener\">Ouvrir le formulaire</a><br>- Paiement et inscription finale : <a href=\"https://www.helloasso.com/associations/la-clichoise-handball\" target=\"_blank\" rel=\"noopener\">HelloAsso - La Clichoise Handball</a>",
+            calendrier:
+                "Calendrier :<br>- Voir le calendrier des matches et entraînements sur la page dédiée : <a href=\"calendrier.html\" target=\"_blank\" rel=\"noopener\">Ouvrir le calendrier</a>",
+            contact:
+                "Contact :<br>- Pour toute question, utilisez notre page contact : <a href=\"contact.html\" target=\"_blank\" rel=\"noopener\">Contactez-nous</a>\n- Vous pouvez aussi suivre la page HelloAsso pour les annonces officielles.",
+            autre:
+                "Je peux répondre aux questions sur les tarifs, les catégories ouvertes, les années de naissance, les lieux, les horaires et les pré-inscriptions. Posez-moi une question précise ou utilisez les boutons ci-dessus."
+        };
+
+        const chatWindow = document.getElementById("chatWindow");
+        const chatForm = document.getElementById("chatForm");
+        const chatInput = document.getElementById("chatInput");
+        const buttons = document.querySelectorAll(".chat-actions button");
+
+        function addMessage(text, sender) {
+            const message = document.createElement("div");
+            message.className = "chat-message " + sender;
+            if (sender === "bot") {
+                message.innerHTML = text;
+            } else {
+                message.textContent = text;
+            }
+            chatWindow.appendChild(message);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function askBot(key) {
+            const questionText = {
+                tarifs: "Quels sont les prix des différentes catégories ?",
+                categories: "Quelles catégories sont ouvertes ?",
+                annees: "Quelles années de naissance pour les inscriptions ?",
+                inscriptions: "Comment puis-je m'inscrire ?",
+                calendrier: "Où trouver le calendrier des entraînements et matches ?",
+                contact: "Comment contacter le club ?",
+                jeunes: "Quels sont les lieux et horaires pour les catégories jeunes ?",
+                mixtes: "Quels sont les lieux et horaires pour les catégories mixtes ?"
+            }[key] || chatInput.value.trim();
+
+            addMessage(questionText, "user");
+            const response = answers[key] || answers["autre"];
+            addMessage(response, "bot");
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => askBot(button.dataset.question));
+        });
+
+        chatForm.addEventListener("submit", event => {
+            event.preventDefault();
+            const question = chatInput.value.trim();
+            if (!question) return;
+            addMessage(question, "user");
+            const lower = question.toLowerCase();
+            if (lower.includes("prix") || lower.includes("tarif")) {
+                addMessage(answers.tarifs, "bot");
+            } else if (lower.includes("catégorie") || lower.includes("babyhand") || lower.includes("senior")) {
+                addMessage(answers.categories, "bot");
+            } else if (lower.includes("année") || lower.includes("naissance")) {
+                addMessage(answers.annees, "bot");
+            } else if (lower.includes("inscription") || lower.includes("pré-inscription") || lower.includes("préinscription")) {
+                addMessage(answers.inscriptions, "bot");
+            } else if (lower.includes("calend") || lower.includes("match") || lower.includes("entraîn")) {
+                addMessage(answers.calendrier, "bot");
+            } else if (lower.includes("contact") || lower.includes("mail") || lower.includes("téléphone") || lower.includes("téléph")) {
+                addMessage(answers.contact, "bot");
+            } else if (lower.includes("jeunes") || lower.includes("jeunesse")) {
+                addMessage(answers.jeunes, "bot");
+            } else if (lower.includes("mixte")) {
+                addMessage(answers.mixtes, "bot");
+            } else {
+                addMessage(answers.autre, "bot");
+            }
+            chatInput.value = "";
+            chatInput.focus();
+        });
+    </script>
 </div>
 
 </body>
