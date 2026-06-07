@@ -25,7 +25,7 @@
 <body>
 
 <header>
-    <a href="index.html">
+    <a href="index.html" class="logo-link">
         <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
     </a>
 
@@ -34,28 +34,43 @@
         <a href="equipes.html">Équipes</a>
         <a href="calendrier.html">Calendrier</a>
         <a href="resultats.html">Résultats</a>
-        <a href="boutique.html">Boutique</a>
+        <a href="boutique.html" class="active">Boutique</a>
         <a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<div class="content" style="max-width:100%; padding:0;">
-    <div style="text-align:center; padding:30px 20px 10px;">
-        <h1>Boutique officielle</h1>
-        <p style="font-size:1.1rem; max-width:700px; margin:10px auto 0; color:#4f5c75;">
-            Découvrez et commandez nos articles aux couleurs du club. Maillots, sweats, accessoires… Soutenez La Clichoise Handball !
-        </p>
-    </div>
-
-    <iframe src="https://boutique-officielle-la-clicho.myspreadshop.fr/"
-        style="width:100%; height:calc(100vh - 120px); min-height:1200px; border:none; display:block;"
-        allowfullscreen>
-    </iframe>
+<div class="boutique-page">
+    <h1>BOUTIQUE OFFICIELLE</h1>
+    <p>Découvrez et commandez nos articles aux couleurs du club. Maillots, sweats, accessoires… Soutenez La Clichoise Handball !</p>
 </div>
 
+<iframe src="https://boutique-officielle-la-clicho.myspreadshop.fr/"
+    style="width:100%; height:calc(100vh - 80px); min-height:1000px; border:none; display:block;"
+    allowfullscreen>
+</iframe>
+
 <footer>
-    © 2026 La Clichoise Handball – Tous droits réservés
+    <div class="footer-content">
+        <div class="footer-brand">
+            <img src="image/laclichoise.png" alt="La Clichoise Handball" class="footer-logo">
+            <p>© 2026 La Clichoise Handball<br>Tous droits réservés</p>
+        </div>
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <a href="index.html">Accueil</a>
+            <a href="equipes.html">Équipes</a>
+            <a href="calendrier.html">Calendrier</a>
+            <a href="resultats.html">Résultats</a>
+        </div>
+        <div class="footer-links">
+            <h4>Services</h4>
+            <a href="boutique.html">Boutique</a>
+            <a href="contact.html">Contact</a>
+            <a href="partenaires.html">Partenaires</a>
+            <a href="https://www.helloasso.com/associations/la-clichoise-handball" target="_blank">Inscription</a>
+        </div>
+    </div>
 </footer>
 
 </body>
