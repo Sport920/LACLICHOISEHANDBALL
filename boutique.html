@@ -40,12 +40,20 @@
     </nav>
 </header>
 
-<div style="width:100%; margin:0; padding:0; overflow:hidden;">
-    <iframe src="https://boutique-officielle-la-clicho.myspreadshop.fr/"
-        style="width:100%; height:calc(100vh - 100px); min-height:800px; border:none; display:block;"
-        allowfullscreen>
-    </iframe>
+<div id="shop" style="width:100%; margin:0; padding:20px; min-height:80vh;">
+    Chargement de la boutique...
 </div>
+
+<script>
+    var spread_shop_config = {
+        prefix: 'https://boutique-officielle-la-clicho.myspreadshop.fr',
+        shopName: 'boutique-officielle-la-clicho',
+        baseId: 'shop',
+        locale: 'fr_FR',
+        startToken: 'all'
+    };
+</script>
+<script type="text/javascript" src="https://boutique-officielle-la-clicho.myspreadshop.fr/js/shopclient.nocache.js"></script>
 
 <footer style="padding: 10px; text-align:center; font-size:0.85rem;">
     © 2026 La Clichoise Handball – Tous droits réservés
