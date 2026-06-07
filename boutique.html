@@ -20,13 +20,130 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        .boutique-hero {
+            background: linear-gradient(135deg, var(--bleu) 0%, var(--rouge) 100%);
+            padding: 50px 20px;
+            text-align: center;
+            color: var(--blanc);
+            position: relative;
+            overflow: hidden;
+        }
+        .boutique-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .boutique-hero h1 {
+            color: var(--jaune);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .boutique-hero p {
+            color: rgba(255,255,255,0.92);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .boutique-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .boutique-badge {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--blanc);
+            backdrop-filter: blur(4px);
+        }
+        .boutique-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .boutique-section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+        .boutique-section .subtitle {
+            text-align: center;
+            color: #6b7a94;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        #shop {
+            width: 100%;
+            min-height: 600px;
+            border-radius: 16px;
+            background: var(--blanc);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 20px;
+        }
+        .boutique-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            padding: 0 20px 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .boutique-info-card {
+            background: var(--blanc);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease;
+        }
+        .boutique-info-card:hover {
+            transform: translateY(-4px);
+        }
+        .boutique-info-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .boutique-info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--bleu);
+        }
+        .boutique-info-card p {
+            font-size: 0.9rem;
+            color: #6b7a94;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 
 <body>
 
-<header style="padding: 10px 20px;">
+<header>
     <a href="index.html">
-        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball" style="height: 80px; max-height: 80px;">
+        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
     </a>
 
     <nav>
@@ -40,8 +157,46 @@
     </nav>
 </header>
 
-<div id="shop" style="width:100%; margin:0; padding:20px; min-height:80vh;">
-    Chargement de la boutique...
+<!-- Hero section boutique -->
+<section class="boutique-hero">
+    <h1>Boutique Officielle</h1>
+    <p>Soutenez le club en portant fièrement les couleurs de La Clichoise Handball. Maillots, sweats, accessoires — tout pour les passionnés !</p>
+    <div class="boutique-badges">
+        <span class="boutique-badge">Livraison à domicile</span>
+        <span class="boutique-badge">Paiement sécurisé</span>
+        <span class="boutique-badge">Qualité premium</span>
+    </div>
+</section>
+
+<!-- Produits Spreadshop -->
+<section class="boutique-section">
+    <h2>Nos produits</h2>
+    <p class="subtitle">Cliquez sur un article pour voir les détails, choisir votre taille et commander.</p>
+    <div id="shop">Chargement de la boutique...</div>
+</section>
+
+<!-- Infos pratiques -->
+<div class="boutique-info">
+    <div class="boutique-info-card">
+        <div class="icon">📦</div>
+        <h3>Livraison rapide</h3>
+        <p>Recevez vos articles directement chez vous sous quelques jours ouvrés.</p>
+    </div>
+    <div class="boutique-info-card">
+        <div class="icon">🔒</div>
+        <h3>Paiement sécurisé</h3>
+        <p>Transactions 100% sécurisées via notre partenaire Spreadshop.</p>
+    </div>
+    <div class="boutique-info-card">
+        <div class="icon">👕</div>
+        <h3>Qualité garantie</h3>
+        <p>Articles officiels aux couleurs du club, confection soignée et durable.</p>
+    </div>
+    <div class="boutique-info-card">
+        <div class="icon">💙</div>
+        <h3>Soutenez le club</h3>
+        <p>Chaque achat contribue au développement de La Clichoise Handball.</p>
+    </div>
 </div>
 
 <script>
@@ -55,7 +210,7 @@
 </script>
 <script type="text/javascript" src="https://boutique-officielle-la-clicho.myspreadshop.fr/js/shopclient.nocache.js"></script>
 
-<footer style="padding: 10px; text-align:center; font-size:0.85rem;">
+<footer>
     © 2026 La Clichoise Handball – Tous droits réservés
 </footer>
 
