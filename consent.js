@@ -59,7 +59,33 @@
         });
     }
 
+    function initMenu() {
+        var header = document.querySelector("header");
+        var nav = header && header.querySelector("nav");
+        if (!header || !nav || document.querySelector(".nav-toggle")) return;
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "nav-toggle";
+        btn.setAttribute("aria-label", "Ouvrir le menu");
+        btn.setAttribute("aria-expanded", "false");
+        btn.innerHTML = "\u2630";
+        header.insertBefore(btn, nav);
+        btn.addEventListener("click", function () {
+            var open = header.classList.toggle("nav-open");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+            btn.innerHTML = open ? "\u2715" : "\u2630";
+        });
+        nav.addEventListener("click", function (e) {
+            if (e.target.tagName === "A") {
+                header.classList.remove("nav-open");
+                btn.setAttribute("aria-expanded", "false");
+                btn.innerHTML = "\u2630";
+            }
+        });
+    }
+
     function init() {
+        initMenu();
         var consent = getConsent();
         if (consent === "granted") {
             loadAnalytics();
