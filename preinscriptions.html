@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Préinscriptions La Clichoise Handball – Baby Hand, U7, U9, U11, Seniors. Club à Clichy-la-Garenne.">
-    <link rel="icon" href="image/laclichoise.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pré-inscriptions à La Clichoise Handball : formulaire en ligne et paiement des licences via HelloAsso.">
+    <link rel="icon" type="image/png" href="image/laclichoise.png">
     <title>Préinscriptions – La Clichoise Handball</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBP39TY6W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9WBP39TY6W');
-    </script>
-
     <link rel="stylesheet" href="style.css">
+    <script src="consent.js" defer></script>
 </head>
 <body>
 
@@ -27,10 +19,11 @@
 
     <nav>
         <a href="index.html">Accueil</a>
+        <a href="club.html">Le club</a>
         <a href="equipes.html">Équipes</a>
         <a href="calendrier.html">Calendrier</a>
         <a href="resultats.html">Résultats</a>
-        <a href="boutique.html">Boutique</a>
+        <a href="handfit.html">Handfit</a>
         <a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -38,21 +31,62 @@
 
 <h1>Préinscriptions</h1>
 
+<div class="handball-intro" aria-hidden="true"></div>
+
 <div class="box">
     <p>
         Merci de remplir le formulaire ci‑dessous pour vous préinscrire.
     </p>
 
-    <!-- Étape 1 : Préinscription -->
-    <a class="button" href="https://forms.gle/MqWsTmePCeQissNQ6" target="_blank">
-        📝 Étape 1 : Remplir le formulaire de préinscription
+    <a class="button" href="https://forms.gle/MqWsTmePCeQissNQ6" target="_blank" rel="noopener">
+        Ouvrir le formulaire de préinscription
     </a>
 
-    <!-- Étape 2 : Paiement -->
-    <p style="margin-top:20px; color:#2b3a5d; font-weight:600;">Paiement des licences et cotisations :</p>
-    <a class="button" href="https://www.helloasso.com/associations/la-clichoise-handball" target="_blank" rel="noopener" style="margin-top:10px; display:inline-block;">
-        💳 Étape 2 : Payer la licence (HelloAsso)
-    </a>
+    <p style="margin-top:20px; color:#777;">
+        L'inscription se fait en ligne via HelloAsso ; le paiement de la cotisation s'effectue par virement bancaire (voir ci-dessous).
+    </p>
+
+    <p style="margin-top:10px; color:#2b3a5d; font-weight:600;">Inscription finale :</p>
+    <p style="margin-bottom:12px"><a class="button" href="https://www.helloasso.com/associations/la-clichoise-handball/adhesions/adhesion-2026-2027-sport" target="_blank" rel="noopener" style="background:linear-gradient(135deg,var(--rouge),var(--rouge-clair));">S'inscrire (HelloAsso)</a></p>
+
+    <h2 style="text-align:center;">Pièces à fournir pour l'inscription</h2>
+    <div class="box">
+        <ul>
+            <li><strong>📷 Une photo d'identité récente</strong> du licencié (format portrait, visage bien visible — elle figure sur la licence FFHB).</li>
+            <li><strong>🪪 Une pièce d'identité</strong> recto-verso (carte d'identité, passeport ou livret de famille pour les plus jeunes) — pour toute première licence.</li>
+            <li><strong>🩺 Le questionnaire de santé FFHB</strong> complété. Un certificat médical n'est demandé que si une réponse du questionnaire l'exige (mineurs) ou si votre précédent certificat a plus de 3 ans (majeurs).</li>
+            <li><strong>✍️ L'autorisation parentale</strong> pour les mineurs (complétée en ligne lors de la demande de licence FFHB).</li>
+            <li><strong>📸 L'autorisation de droit à l'image</strong> — <a href="droit-image.html">imprimez le formulaire ici</a>.</li>
+            <li><strong>💳 Le paiement de la cotisation</strong> par virement bancaire (contactez-nous pour recevoir le RIB — possibilité en 3 fois). L'inscription, elle, se fait en ligne via HelloAsso.</li>
+        </ul>
+        <p style="color:#59667f; font-size:0.9rem;">Le dossier se complète en ligne via le lien FFHB (Gest'hand) que nous vous envoyons après votre préinscription.</p>
+    </div>
+
+    <h2 style="text-align:center;">Tarifs des licences 2026-2027</h2>
+    <table class="tarifs-table">
+        <thead>
+            <tr><th>Catégorie</th><th>Résident Clichy</th><th>Non résident</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Baby Hand</td><td>150 €</td><td>160 €</td></tr>
+            <tr><td>Handfit</td><td>120 €</td><td>130 €</td></tr>
+            <tr><td>U7</td><td>160 €</td><td>170 €</td></tr>
+            <tr><td>U9</td><td>160 €</td><td>170 €</td></tr>
+            <tr><td>U11</td><td>170 €</td><td>180 €</td></tr>
+            <tr><td>Seniors</td><td>220 €</td><td>230 €</td></tr>
+        </tbody>
+    </table>
+
+    <h2 style="text-align:center;">Paiement par virement bancaire</h2>
+    <div class="box rib-box">
+        <p>Le paiement de la cotisation s'effectue par virement bancaire (l'inscription, elle, se fait via HelloAsso).</p>
+        <p><strong>Contactez-nous</strong> par email à
+        <a href="mailto:asso.laclichoisehandball@gmail.com">asso.laclichoisehandball@gmail.com</a>
+        et nous vous enverrons le RIB du club. Merci d'indiquer ensuite en libellé du virement :
+        <strong>nom + prénom du licencié + catégorie</strong>.</p>
+        <p style="color:#59667f; font-size:0.9rem;">Possibilité de payer en 3 fois — contactez-nous pour en convenir.</p>
+        <a class="btn" href="contact.html">Nous contacter</a>
+    </div>
 
     <div class="box chat-box">
         <div class="chat-card">
@@ -91,17 +125,21 @@
     <script>
         const answers = {
             tarifs:
-                "Tarifs officiels :<br>- Baby Hand <span class='badge'>Mixte</span> : 150 €<br>- U7 <span class='badge'>Mixte</span> : 160 €<br>- U9 <span class='badge'>Mixte</span> : 160 €<br>- U11 <span class='badge'>Mixte</span> : 170 €<br>- Handfit <span class='badge'>Mixte</span> : 120 €<br>- Séniors féminines : 200 €<br><br>Ces tarifs sont à jour pour la saison 2026-2027.",
+                "Tarifs saison 2026-2027 (Résident Clichy / Non résident) :<br>- Baby Hand <span class='badge'>Mixte</span> : 150 € / 160 €<br>- U7 <span class='badge'>Mixte</span> : 160 € / 170 €<br>- U9 <span class='badge'>Mixte</span> : 160 € / 170 €<br>- U11 <span class='badge'>Mixte</span> : 170 € / 180 €<br>- Handfit <span class='badge'>Mixte</span> : 120 € / 130 €<br>- Séniors féminines : 220 € / 230 €<br><br>Inscription via HelloAsso ; paiement de la cotisation par virement bancaire : contactez-nous et nous vous enverrons le RIB.",
             categories:
                 "Catégories ouvertes selon HelloAsso :<br>- BabyHand <span class='badge'>Mixte</span><br>- HandFit <span class='badge'>Mixte</span><br>- U7 <span class='badge'>Mixte</span><br>- U9 <span class='badge'>Mixte</span><br>- U11 <span class='badge'>Mixte</span><br>- Senior féminine : Féminine<br><br>Les catégories jeunes jusqu'à U11 sont mixtes (filles et garçons).<br>Les pré-inscriptions sont officiellement ouvertes !",
             annees:
-                "Années de naissance recommandées :\n- BabyHand : 2017 et après\n- U7 : 2018-2019\n- U9 : 2016-2017\n- U11 : 2014-2015\n- Senior féminine : 2006 et avant (ou selon le niveau du club).\nVérifiez toujours avec le club pour la catégorie exacte.",
+                "Années de naissance pour la saison 2026-2027 :<br>- BabyHand : enfants nés en 2021, 2022 ou 2023 (à partir de 3 ans)<br>- U7 : nés en 2020 (et 2021 selon effectifs)<br>- U9 : nés en 2018-2019<br>- U11 : nés en 2016-2017<br>- Senior féminine : nées en 2008 et avant<br>Vérifiez toujours avec le club pour la catégorie exacte.",
             inscriptions:
-                "Pré-inscriptions :<br>- Remplissez le formulaire de préinscription via notre Google Form ou rendez-vous sur HelloAsso pour finaliser le paiement.<br>- Formulaire Google : <a href=\"https://forms.gle/MqWsTmePCeQissNQ6\" target=\"_blank\" rel=\"noopener\">Ouvrir le formulaire</a><br>- Paiement et inscription finale : <a href=\"https://www.helloasso.com/associations/la-clichoise-handball\" target=\"_blank\" rel=\"noopener\">HelloAsso - La Clichoise Handball</a>",
+                "Pré-inscriptions :<br>- Remplissez le formulaire de préinscription via notre Google Form ou rendez-vous sur HelloAsso pour finaliser le paiement.<br>- Formulaire Google : <a href=\"https://forms.gle/MqWsTmePCeQissNQ6\" target=\"_blank\" rel=\"noopener\">Ouvrir le formulaire</a><br>- Inscription finale : <a href=\"https://www.helloasso.com/associations/la-clichoise-handball/adhesions/adhesion-2026-2027-sport\" target=\"_blank\" rel=\"noopener\">HelloAsso - La Clichoise Handball</a><br>- Paiement de la cotisation : par virement bancaire (contactez-nous pour recevoir le RIB)",
             calendrier:
                 "Calendrier :<br>- Voir le calendrier des matches et entraînements sur la page dédiée : <a href=\"calendrier.html\" target=\"_blank\" rel=\"noopener\">Ouvrir le calendrier</a>",
             contact:
                 "Contact :<br>- Pour toute question, utilisez notre page contact : <a href=\"contact.html\" target=\"_blank\" rel=\"noopener\">Contactez-nous</a>\n- Vous pouvez aussi suivre la page HelloAsso pour les annonces officielles.",
+            jeunes:
+                "Catégories jeunes — le samedi matin au Gymnase Léo-Lagrange (13 rue Bardin, Clichy) :<br>- U7 : 10h00-11h00<br>- Baby Hand, U9, U11 : le samedi matin, créneaux précis communiqués à la rentrée<br>- Handfit (adultes) : 9h00-10h00<br>Seniors féminines : lundi 20h-22h (gymnase Henri-Geffroy) et vendredi 20h-22h (gymnase Georges-Racine).",
+            mixtes:
+                "Toutes les catégories jeunes jusqu'à U11 ainsi que le Handfit sont mixtes (filles et garçons).<br>- Lieu : Gymnase Léo-Lagrange, 13 rue Bardin, Clichy<br>- Handfit : samedi 9h00-10h00<br>- U7 : samedi 10h00-11h00<br>- Baby Hand, U9, U11 : le samedi matin (créneaux précis à la rentrée).",
             autre:
                 "Je peux répondre aux questions sur les tarifs, les catégories ouvertes, les années de naissance, les lieux, les horaires et les pré-inscriptions. Posez-moi une question précise ou utilisez les boutons ci-dessus."
         };
@@ -176,7 +214,9 @@
 </div>
 
 <footer>
-    © 2026 La Clichoise Handball – Tous droits réservés
+    <p>© 2026 La Clichoise Handball – Tous droits réservés</p>
+    <p class="footer-links"><a href="https://www.instagram.com/la_clichoise_handball?igsh=MThleGwzaDRwMzh0OQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/61588836392411/?locale=fr_FR" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:asso.laclichoisehandball@gmail.com">Email</a></p>
+    <p class="footer-links"><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a> · <a href="#" id="cookie-settings">Gérer les cookies</a></p>
 </footer>
 
 </body>
