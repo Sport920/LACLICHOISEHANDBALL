@@ -747,7 +747,7 @@ footer .footer-links a {
     transform: none;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     .nav-toggle { display: inline-flex; }
 
     header {
@@ -773,8 +773,4 @@ footer .footer-links a {
     }
 
     header.nav-open nav { display: flex; }
-}
-
-@media (max-width: 900px) {
-    header { flex-direction: row; align-items: center; }
 }
