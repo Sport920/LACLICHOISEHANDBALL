@@ -2,46 +2,46 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formulaire de pré-inscription Handfit – La Clichoise Handball à Clichy-la-Garenne.">
-    <link rel="icon" href="image/laclichoise.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Formulaire de pré-inscription à l'activité Handfit de La Clichoise Handball.">
+    <link rel="icon" type="image/png" href="image/laclichoise.png">
     <title>Pré‑inscription Handfit</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBP39TY6W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9WBP39TY6W');
-    </script>
-
     <link rel="stylesheet" href="style.css">
+    <script src="consent.js" defer></script>
 </head>
 
 <body>
 
 <header>
-    <a href="index.html">
-        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball" class="logo">
-    </a>
+    <img src="image/laclichoise.png" alt="Logo La Clichoise Handball" class="logo">
 
     <nav>
         <a href="index.html">Accueil</a>
+        <a href="club.html">Le club</a>
         <a href="equipes.html">Équipes</a>
         <a href="calendrier.html">Calendrier</a>
         <a href="resultats.html">Résultats</a>
-        <a href="boutique.html">Boutique</a>
+        <a href="handfit.html">Handfit</a>
         <a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
-        <a href="handfit.html"><strong>Handfit</strong></a>
     </nav>
 </header>
 
 <div class="content">
     <h3>Pré‑inscription Handfit</h3>
+    <div class="box" style="padding:20px; margin-bottom:24px;">
+        <h4>Pré-inscription Handfit</h4>
+        <p style="color:#2b3a5d; line-height:1.7;">
+            Remplissez le formulaire ci-dessous pour pré-inscrire votre participation au Handfit.
+        </p>
+    </div>
 
     <form action="https://formspree.io/f/maqznowo" method="POST" class="form-handfit">
+
+        <div class="hp-field" aria-hidden="true">
+            <label for="site_web">Ne pas remplir ce champ</label>
+            <input type="text" id="site_web" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
 
         <label>Nom :</label>
         <input type="text" name="nom" required>
@@ -58,12 +58,17 @@
         <label>Objectif personnel :</label>
         <textarea name="objectif" rows="4"></textarea>
 
+        <p class="rgpd-note">Les données de ce formulaire sont utilisées uniquement pour gérer votre pré-inscription au Handfit.
+        Voir notre <a href="mentions-legales.html">politique de confidentialité</a> pour connaître vos droits (accès, rectification, suppression).</p>
+
         <button type="submit" class="btn">Envoyer</button>
     </form>
 </div>
 
 <footer>
-    © 2026 La Clichoise Handball – Tous droits réservés
+    <p>© 2026 La Clichoise Handball – Tous droits réservés</p>
+    <p class="footer-links"><a href="https://www.instagram.com/la_clichoise_handball?igsh=MThleGwzaDRwMzh0OQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/61588836392411/?locale=fr_FR" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:asso.laclichoisehandball@gmail.com">Email</a></p>
+    <p class="footer-links"><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a> · <a href="#" id="cookie-settings">Gérer les cookies</a></p>
 </footer>
 
 </body>
