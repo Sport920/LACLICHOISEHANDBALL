@@ -2,69 +2,73 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calendrier de La Clichoise Handball – Entraînements, matchs et événements à Clichy-la-Garenne.">
-    <link rel="icon" href="image/laclichoise.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calendrier des entraînements, matchs et événements de La Clichoise Handball.">
+    <link rel="icon" type="image/png" href="image/laclichoise.png">
     <title>Calendrier – La Clichoise Handball</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WBP39TY6W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9WBP39TY6W');
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="consent.js" defer></script>
 </head>
 <body>
 
 <header>
-    <a class="logo-link" href="index.html">
+    <a href="index.html">
         <img src="image/laclichoise.png" alt="Logo La Clichoise Handball">
     </a>
 
     <nav>
         <a href="index.html">Accueil</a>
+        <a href="club.html">Le club</a>
         <a href="equipes.html">Équipes</a>
-        <a class="active" href="calendrier.html">Calendrier</a>
+        <a href="calendrier.html">Calendrier</a>
         <a href="resultats.html">Résultats</a>
-        <a href="boutique.html">Boutique</a>
+        <a href="handfit.html">Handfit</a>
         <a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Calendrier du Club</h1>
-    <p>Restez informé des prochaines dates : entraînements, événements et matchs de La Clichoise Handball. Le calendrier se mettra à jour dès que de nouveaux rendez-vous seront confirmés.</p>
-</section>
+<h1>Calendrier du Club</h1>
+
+<div class="hero-image-row" aria-hidden="true"></div>
 
 <div class="content">
-    <div class="status-card">
-        <div class="status-pill">Aucun match prévu pour le moment</div>
 
-        <h2>Pas encore de rencontre programmée</h2>
-        <p>Notre équipe travaille à finaliser les prochaines dates de matchs. En attendant, retrouvez ici les informations sur les entraînements et les événements du club.</p>
+    <div class="box">
+        <h2>Entraînements – Saison 2026-2027</h2>
 
         <div class="schedule">
             <div class="event-card">
-                <strong>Entraînement</strong>
-                <span>Samedi • horaire à venir • Gymnase Léo Lagrange</span>
+                <strong>🧒 Catégories jeunes &amp; Handfit — Samedi matin</strong>
+                <span>📍 Gymnase Léo-Lagrange, 13 rue Bardin, 92110 Clichy (créneau club : 9h00 – 13h00)</span>
+                <span>• Handfit : 9h00 – 10h00</span>
+                <span>• U7 : 10h00 – 11h00</span>
+                <span>• Baby Hand, U9 et U11 : le samedi matin — créneaux précis communiqués à la rentrée</span>
             </div>
+
             <div class="event-card">
-                <strong>Handfit</strong>
-                <span>Samedi • horaire à venir • Gymnase Léo Lagrange</span>
+                <strong>🏆 Seniors féminines — Lundi soir</strong>
+                <span>📍 Gymnase Henri-Geffroy (salle multisports) : 20h00 – 22h00</span>
+            </div>
+
+            <div class="event-card">
+                <strong>🏆 Seniors féminines — Vendredi soir</strong>
+                <span>📍 Gymnase Georges-Racine (salle D) : 20h00 – 22h00</span>
             </div>
         </div>
 
-        <a class="cta" href="contact.html">Contactez-nous pour en savoir plus</a>
+        <p style="margin-top:16px;">Le calendrier des matchs sera publié au lancement des championnats.</p>
+        <a href="preinscription-handfit.html" class="btn" style="margin-top:16px;">Pré‑inscription Handfit</a>
     </div>
+
 </div>
 
 <footer>
-    © 2026 La Clichoise Handball – Tous droits réservés
+    <p>© 2026 La Clichoise Handball – Tous droits réservés</p>
+    <p class="footer-links"><a href="https://www.instagram.com/la_clichoise_handball?igsh=MThleGwzaDRwMzh0OQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/61588836392411/?locale=fr_FR" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:asso.laclichoisehandball@gmail.com">Email</a></p>
+    <p class="footer-links"><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a> · <a href="#" id="cookie-settings">Gérer les cookies</a></p>
 </footer>
 
 </body>
