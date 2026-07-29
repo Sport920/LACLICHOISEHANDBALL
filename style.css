@@ -67,9 +67,13 @@ header a:first-child {
 
 header img,
 .logo {
-    height: 96px;
-    width: auto;
-    border-radius: 12px;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--blanc);
+    border: 3px solid rgba(255,255,255,0.65);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 @media (max-width: 1100px) {
@@ -94,14 +98,16 @@ header img,
 @media (max-width: 900px) {
     header img,
     .logo {
-        height: 80px;
+        height: 96px;
+        width: 96px;
     }
 }
 
 @media (max-width: 680px) {
     header img,
     .logo {
-        height: 68px;
+        height: 76px;
+        width: 76px;
     }
 }
 
@@ -773,4 +779,129 @@ footer .footer-links a {
     }
 
     header.nav-open nav { display: flex; }
+}
+
+/* ---- Titres de section (accent, sans emoji) ---- */
+.sec-title {
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.sec-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.28em;
+    bottom: 0.12em;
+    width: 6px;
+    background: linear-gradient(var(--rouge), var(--bleu));
+    border-radius: 3px;
+}
+
+/* ---- Bannière d'accueil ---- */
+.hero-banner {
+    padding: 60px 34px 54px;
+    background:
+        linear-gradient(135deg, rgba(10,42,102,0.82) 0%, rgba(15,74,150,0.62) 45%, rgba(214,40,40,0.78) 100%),
+        url('image/banniere.jpg') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 12% 88%, rgba(244,163,0,0.18) 0%, transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(255,255,255,0.10) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.hero-banner > * { position: relative; }
+
+.hero-logo {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--blanc);
+    border: 6px solid rgba(255,255,255,0.9);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.35);
+    margin: 0 auto 22px;
+}
+
+@media (max-width: 680px) {
+    .hero-logo { width: 140px; height: 140px; }
+    .hero-banner { padding: 40px 20px 38px; }
+}
+
+.saison-pill {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: var(--jaune);
+    color: #33230a;
+    font-weight: 800;
+    font-size: 1.02rem;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+.btn-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    border-radius: 999px;
+    background: var(--blanc);
+    color: var(--bleu);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-light:hover { transform: translateY(-2px); }
+
+/* ---- Cartes équipes ---- */
+.team-card {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 26px;
+    align-items: center;
+    background: var(--blanc);
+    border-radius: 24px;
+    padding: 26px;
+    box-shadow: 0 18px 40px var(--ombre);
+}
+
+.team-photo {
+    height: 180px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.9);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    background:
+        linear-gradient(135deg, rgba(10,42,102,0.88), rgba(214,40,40,0.8)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 12px, transparent 12px 24px);
+}
+
+.team-infos h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: var(--bleu);
+}
+
+.team-infos ul { margin: 0; }
+.team-infos li { margin-bottom: 0.5rem; }
+.team-infos li strong { color: var(--rouge); }
+
+@media (max-width: 680px) {
+    .team-card { grid-template-columns: 1fr; }
+    .team-photo { height: 140px; }
 }
