@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="La galerie photos de La Clichoise Handball : matchs, équipes, jeunes et événements du club de handball de Clichy.">
+    <link rel="icon" type="image/png" href="image/laclichoise.png">
+    <title>Galerie – La Clichoise Handball</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="consent.js" defer></script>
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="image/laclichoise.png" alt="Logo La Clichoise Handball" class="logo">
+    </a>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="club.html">Le club</a>
+        <a href="equipes.html">Équipes</a>
+        <a href="preinscriptions.html">Inscriptions</a>
+        <a href="calendrier.html">Calendrier</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="galerie.html" class="active">Galerie</a>
+        <a href="handfit.html">Handfit</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Galerie photos</h2>
+    <p>Revivez en images les matchs, les entraînements et les grands moments de la vie du club.</p>
+</section>
+
+<div class="content">
+
+    <div class="gallery-filters" role="tablist" aria-label="Filtrer les photos">
+        <button class="filter-btn active" data-filter="toutes">Toutes</button>
+        <button class="filter-btn" data-filter="matchs">Matchs</button>
+        <button class="filter-btn" data-filter="equipes">Équipes</button>
+        <button class="filter-btn" data-filter="jeunes">Jeunes</button>
+        <button class="filter-btn" data-filter="evenements">Événements</button>
+    </div>
+
+    <!--
+        Pour ajouter une vraie photo :
+        1. Déposer le fichier dans le dossier image/galerie/
+        2. Remplacer un bloc "gallery-placeholder" par :
+           <figure class="gallery-item" data-cat="matchs">
+               <img src="image/galerie/mon-fichier.jpg" alt="Description de la photo" loading="lazy">
+               <figcaption>Légende de la photo</figcaption>
+           </figure>
+        Catégories possibles : matchs, equipes, jeunes, evenements
+    -->
+    <div class="gallery-grid" id="gallery">
+
+        <figure class="gallery-item gallery-placeholder ph-1" data-cat="matchs">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Match seniors féminines</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-2" data-cat="equipes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Photo d'équipe</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-3" data-cat="jeunes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>École de hand</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-4" data-cat="evenements">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Forum des associations</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-2" data-cat="matchs">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Match à Henri-Geffroy</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-3" data-cat="jeunes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Tournoi jeunes</figcaption>
+        </figure>
+
+        <a class="gallery-item sponsor-slot" href="partenaires.html">
+            <span class="sponsor-tag">Sponsor</span>
+            <strong>Votre pub ici</strong>
+            <span>Devenez partenaire du club</span>
+        </a>
+
+        <figure class="gallery-item gallery-placeholder ph-4" data-cat="equipes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Seniors féminines</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-1" data-cat="evenements">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Fête du club</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-3" data-cat="matchs">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Match à Georges-Racine</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-2" data-cat="jeunes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Entraînement des jeunes</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-1" data-cat="equipes">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Équipe jeunes mixte</figcaption>
+        </figure>
+        <figure class="gallery-item gallery-placeholder ph-4" data-cat="evenements">
+            <span class="ph-icon" aria-hidden="true">📷</span>
+            <figcaption>Handfit en action</figcaption>
+        </figure>
+
+        <a class="gallery-item sponsor-slot" href="partenaires.html">
+            <span class="sponsor-tag">Sponsor</span>
+            <strong>Votre pub ici</strong>
+            <span>Devenez partenaire du club</span>
+        </a>
+
+    </div>
+
+    <p class="gallery-empty" id="gallery-empty" hidden>Aucune photo dans cette catégorie pour le moment.</p>
+
+    <div class="partners sponsor-band">
+        <h3>Nos partenaires</h3>
+        <p>Ces emplacements sont réservés aux entreprises et commerces qui soutiennent le club.</p>
+        <div class="sponsor-band-grid">
+            <a class="sponsor-slot sponsor-slot--small" href="partenaires.html"><strong>Votre logo ici</strong><span>Emplacement disponible</span></a>
+            <a class="sponsor-slot sponsor-slot--small" href="partenaires.html"><strong>Votre logo ici</strong><span>Emplacement disponible</span></a>
+            <a class="sponsor-slot sponsor-slot--small" href="partenaires.html"><strong>Votre logo ici</strong><span>Emplacement disponible</span></a>
+            <a class="sponsor-slot sponsor-slot--small" href="partenaires.html"><strong>Votre logo ici</strong><span>Emplacement disponible</span></a>
+        </div>
+        <a class="btn" href="partenaires.html">Devenir partenaire</a>
+    </div>
+
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">✕</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+</div>
+
+<footer>
+    <p>© 2026 La Clichoise Handball – Tous droits réservés</p>
+    <p class="footer-links"><a href="https://www.instagram.com/la_clichoise_handball?igsh=MThleGwzaDRwMzh0OQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/61588836392411/?locale=fr_FR" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:asso.laclichoisehandball@gmail.com">Email</a></p>
+    <p class="footer-links"><a href="mentions-legales.html">Mentions légales &amp; confidentialité</a> · <a href="#" id="cookie-settings">Gérer les cookies</a></p>
+</footer>
+
+<script>
+(function () {
+    var buttons = document.querySelectorAll('.filter-btn');
+    var items = document.querySelectorAll('.gallery-item');
+    var emptyMsg = document.getElementById('gallery-empty');
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            buttons.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var filter = btn.dataset.filter;
+            var visible = 0;
+            items.forEach(function (item) {
+                if (item.classList.contains('sponsor-slot')) {
+                    item.hidden = false;
+                    return;
+                }
+                var show = filter === 'toutes' || item.dataset.cat === filter;
+                item.hidden = !show;
+                if (show) { visible++; }
+            });
+            emptyMsg.hidden = visible > 0;
+        });
+    });
+
+    var lightbox = document.getElementById('lightbox');
+    var lightboxContent = document.getElementById('lightbox-content');
+
+    function openLightbox(item) {
+        var img = item.querySelector('img');
+        var caption = item.querySelector('figcaption');
+        lightboxContent.innerHTML = '';
+        if (img) {
+            var big = document.createElement('img');
+            big.src = img.src;
+            big.alt = img.alt;
+            lightboxContent.appendChild(big);
+        } else {
+            var clone = item.cloneNode(true);
+            clone.classList.add('lightbox-placeholder');
+            lightboxContent.appendChild(clone);
+        }
+        if (caption) {
+            var cap = document.createElement('p');
+            cap.className = 'lightbox-caption';
+            cap.textContent = caption.textContent;
+            lightboxContent.appendChild(cap);
+        }
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+    }
+
+    items.forEach(function (item) {
+        if (item.classList.contains('sponsor-slot')) { return; }
+        item.addEventListener('click', function () { openLightbox(item); });
+    });
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) { closeLightbox(); }
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !lightbox.hidden) { closeLightbox(); }
+    });
+})();
+</script>
+
+<script data-goatcounter="https://laclichoise.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
